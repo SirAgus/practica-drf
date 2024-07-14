@@ -1,19 +1,27 @@
 [project]
-name = "prueba1"
+name = "prueba"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
     {name = "SirAgus", email = "fernandeztoledo.ignacio@gmail.com"},
 ]
-dependencies = []
-requires-python = ">=3.12"
+dependencies = [
+    "django>=4.0"
+]
+requires-python = "==3.12.*"
 readme = "README.md"
 license = {text = "MIT"}
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+django-migrate = "django-admin migrate"
+linter = "flake8"
+django-makemigrations = "django-admin makemigrations"
+django = "python manage.py"
+dev.composite = ["django runserver"]
 
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
-
-
-[tool.pdm]
-distribution = true

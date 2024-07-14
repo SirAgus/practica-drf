@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  django:
+    image: prueba:version
+    environment:
+      POSTGRES_HOST: db
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    volumes:
+      - django_static_volume:/tu/directorio/de/static
+
+  db:
+    image: postgres:version
+    environment:
+      POSTGRES_DB: ChatDB
+      POSTGRES_USER: lordtoppo
+      POSTGRES_PASSWORD: T0pPo2o24
+    volumes:
+      - postgres_data_volume:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  django_static_volume:
+  postgres_data_volume:
