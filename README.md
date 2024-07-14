@@ -1,35 +1,55 @@
-# Que se necesita:
+# Configuración del Proyecto Django con Docker y PDM
 
-<h1>tener instalado Python y pip, pdm también.</h1>
-<ul>
-    <li>
-        en la consola, instalar django con el siguiente comando: py -m pip install Django
-    </li>
-    <li>
-        luego instaar drf en la consola con el siguiente comando: pip install djangorestframework
-    </li>
-    <li>
-        tener los dos archivos docker-compose
-    </li>
-    <li>
-        iniciar docker
-    </li>
-    <li>
-        comando para iniciar los archivos docker: docker-compose --file docker-compose.dev.yml up -d
-    </li>
-    <li>
-        crear proyecto django:  django-admin startproject prueba1
-    </li>
-    <li>
-        crear app en django: python manage.py startapp authenticate
-    </li>
-    <li>
-        instalar drf: pip install djangorestframework
-    </li>
-    <li>
-        crear un superuser: pdm  django createsuperuser
-    </li>
-    <li>
-        iniciar backend: pdm dev
-    </li>
-</ul>
+## Requisitos
+
+### Instalaciones necesarias:
+1. **Python y pip**: Asegúrate de tener Python y pip instalados.
+2. **PDM**: Instala PDM para la gestión de dependencias.
+
+## Pasos a seguir
+
+1. **Instalar Django**:
+    ```sh
+    py -m pip install Django
+    ```
+
+2. **Instalar Django REST framework (DRF)**:
+    ```sh
+    pip install djangorestframework
+    ```
+
+3. **Archivos Docker Compose**: Asegúrate de tener los archivos `docker-compose.yml` y `docker-compose.dev.yml` en tu proyecto.
+
+4. **Iniciar Docker**: Asegúrate de que Docker está ejecutándose en tu máquina.
+
+5. **Levantar los servicios de Docker**:
+    ```sh
+    docker-compose --file docker-compose.dev.yml up -d
+    ```
+
+6. **Crear un proyecto Django**:
+    ```sh
+    django-admin startproject prueba1
+    ```
+
+7. **Crear una aplicación en Django**:
+    ```sh
+    python manage.py startapp authenticate
+    ```
+
+8. **Instalar DRF nuevamente si es necesario**:
+    ```sh
+    pip install djangorestframework
+    ```
+
+9. **Crear un superusuario en Django**:
+    ```sh
+    pdm run django createsuperuser
+    ```
+
+10. **Iniciar el backend**:
+    ```sh
+    pdm run dev
+    ```
+
+Siguiendo estos pasos, tendrás tu entorno de desarrollo configurado y listo para usar.
