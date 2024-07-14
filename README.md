@@ -19,7 +19,7 @@
     ```
 
 3. **Archivos Docker Compose**: Asegúrate de tener los archivos `docker-compose.yml` y `docker-compose.dev.yml` en tu proyecto.
-
+(ejemplo en los archivos: `Ejemplo_docker.txt`, `Ejemplo_docker_dev.txt` )
 4. **Iniciar Docker**: Asegúrate de que Docker está ejecutándose en tu máquina.
 
 5. **Levantar los servicios de Docker**:
