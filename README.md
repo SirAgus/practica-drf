@@ -53,3 +53,7 @@
     ```
 
 Siguiendo estos pasos, tendrás tu entorno de desarrollo configurado y listo para usar.
+
+
+notas aparte: 
+linter.composite = ["flake8", "ruff", "black --check", "prospector"]
